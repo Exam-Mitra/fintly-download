@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fintly Companion — Download the App</title>
+<meta name="description" content="Download Fintly Companion for Android — a calm, present AI companion to talk to whenever you need." />
+<link rel="icon" type="image/png" href="assets/icon.png" />
+<style>
+  :root {
+    --bg: #F5F3EC;
+    --surface: #FAF9F6;
+    --surface-2: #F0EEE7;
+    --sage: #798F77;
+    --sage-dark: #5E7460;
+    --sage-pale: #D9E2D6;
+    --ink: #2C2B29;
+    --ink-soft: #6B6A65;
+    --border: #E4E1D8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, system-ui, "Inter", "Segoe UI", sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 48px 0 24px;
+  }
+  .icon {
+    width: 88px;
+    height: 88px;
+    border-radius: 22px;
+    box-shadow: 0 8px 24px rgba(94, 116, 96, 0.18);
+    margin-bottom: 18px;
+  }
+  h1 {
+    font-family: Georgia, 'Lora', serif;
+    font-weight: 500;
+    font-size: 28px;
+    margin: 0 0 8px;
+  }
+  .tagline {
+    color: var(--ink-soft);
+    font-size: 15.5px;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .download-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 28px;
+    padding: 16px 20px;
+    background: var(--sage-dark);
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 6px 18px rgba(94, 116, 96, 0.28);
+  }
+  .download-btn:active {
+    transform: scale(0.98);
+  }
+  .meta-row {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 14px;
+    color: var(--ink-soft);
+    font-size: 13px;
+  }
+  .meta-row span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .note {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 16px 18px;
+    font-size: 14px;
+    color: var(--ink-soft);
+    margin-top: 24px;
+  }
+  .note strong { color: var(--ink); }
+  h2 {
+    font-family: Georgia, 'Lora', serif;
+    font-weight: 500;
+    font-size: 21px;
+    margin: 44px 0 14px;
+  }
+  .screens {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .screens::-webkit-scrollbar { display: none; }
+  .screens img {
+    height: 320px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+  .features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .features li {
+    background: var(--surface);
+    border-radius: 14px;
+    padding: 14px 16px;
+    font-size: 14.5px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .features li .dot {
+    color: var(--sage-dark);
+    font-size: 18px;
+    line-height: 1;
+    margin-top: 1px;
+  }
+  .install-steps {
+    counter-reset: step;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .install-steps li {
+    display: flex;
+    gap: 12px;
+    font-size: 14.5px;
+    color: var(--ink);
+  }
+  .install-steps li::before {
+    counter-increment: step;
+    content: counter(step);
+    flex-shrink: 0;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--sage-pale);
+    color: var(--sage-dark);
+    font-weight: 700;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  footer {
+    text-align: center;
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--ink-soft);
+    font-size: 13px;
+  }
+  footer a { color: var(--sage-dark); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img class="icon" src="assets/icon.png" alt="Fintly Companion icon" />
+      <h1>Fintly Companion</h1>
+      <p class="tagline">A calm, present AI companion — always there to talk to, whenever you need.</p>
+
+      <a id="downloadBtn" class="download-btn" href="#" download>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2">
+          <path d="M12 3v13" />
+          <polyline points="6 11 12 17 18 11" />
+          <path d="M4 21h16" />
+        </svg>
+        <span id="downloadLabel">Download APK</span>
+      </a>
+
+      <div class="meta-row">
+        <span id="versionLabel">Version 1.0</span>
+        <span id="sizeLabel">•  ~2.2 MB</span>
+        <span>•  Android 7+</span>
+      </div>
+    </header>
+
+    <div class="note">
+      <strong>Note:</strong> Since this app isn't on the Play Store, Android may show an "Unknown sources" warning the first time you install it — this just means it's from outside the Play Store, not that it's unsafe. See the install steps below.
+    </div>
+
+    <h2>Screenshots</h2>
+    <div class="screens">
+      <img src="assets/screenshot_1.png" alt="Onboarding screen 1" />
+      <img src="assets/screenshot_2.png" alt="Onboarding screen 2" />
+      <img src="assets/screenshot_3.png" alt="Onboarding screen 3" />
+      <img src="assets/screenshot_4.png" alt="Chat screen" />
+      <img src="assets/screenshot_5.png" alt="Companions list" />
+    </div>
+
+    <h2>What you get</h2>
+    <ul class="features">
+      <li><span class="dot">●</span> Create a companion with a name, relationship, and personality that feels like "them"</li>
+      <li><span class="dot">●</span> Warm, natural conversations that remember the flow of your chat</li>
+      <li><span class="dot">●</span> Tap the speaker icon to hear your companion's replies read aloud</li>
+      <li><span class="dot">●</span> A private mood journal to check in with yourself each day</li>
+      <li><span class="dot">●</span> Your conversations stay on your device — no public profile, no social feed</li>
+    </ul>
+
+    <h2>How to install</h2>
+    <ol class="install-steps">
+      <li>Tap the <strong>Download APK</strong> button above.</li>
+      <li>Once downloaded, open the file from your notification bar or Downloads folder.</li>
+      <li>If prompted, tap <strong>Settings</strong> → allow "Install unknown apps" for your browser, then go back and tap Install.</li>
+      <li>Open <strong>Fintly Companion</strong> and say hi to your new companion.</li>
+    </ol>
+
+    <footer>
+      Fintly Companion · <a href="https://companion-ai-cyan.vercel.app/privacy.html" target="_blank" rel="noopener">Privacy Policy</a>
+    </footer>
+  </div>
+
+  <script>
+    // ── Edit these lines whenever you release a new APK ──
+    const DOWNLOAD_URL = "REPLACE_WITH_YOUR_APK_DIRECT_LINK";
+    const VERSION_TEXT = "Version 1.0";
+    const SIZE_TEXT = "•  ~2.2 MB";
+    // ──────────────────────────────────────────────────
+
+    document.getElementById('downloadBtn').setAttribute('href', DOWNLOAD_URL);
+    document.getElementById('versionLabel').textContent = VERSION_TEXT;
+    document.getElementById('sizeLabel').textContent = SIZE_TEXT;
+  </script>
+</body>
+</html>
